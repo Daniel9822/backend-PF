@@ -43,7 +43,7 @@ const port = process.env.PORT || 3001
 async function main() {
     try {
         await sequelize.sync({ force: false}); 
-        // await getGamesForExaminar() 
+        await getGamesForExaminar() 
         let crearAdministrador = await createAdmin() 
         let createGenre = await createGenres()
         console.log(createGenre);
