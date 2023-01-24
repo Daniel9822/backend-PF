@@ -9,7 +9,7 @@ const createAdmin = async () => {
         await Admin.findOrCreate({
             where: {
                 mail: 'admin@andromeda.com',
-                password: pass
+                password: pass 
             },
         });
         return "admin created"; 
