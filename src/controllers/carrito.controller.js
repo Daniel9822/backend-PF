@@ -156,7 +156,6 @@ const deleteItem = async (req, res) => {
                 let itemsUpdate = carToJSON.items.filter(
                     (ele) => ele.id.toString() !== gameId
                 );
-                console.log(itemDeleted);
                 carUser.set({
                     items: itemsUpdate,
                     total_items: itemsUpdate.length,

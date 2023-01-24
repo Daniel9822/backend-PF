@@ -27,7 +27,9 @@ const getGamesForExaminar = async (search = "") => {
         arraMap = mapGames(arrayForGames);
         return arraMap;
     } catch (error) {
-        console.log(error);
+        return {
+            error: error.message
+        }
     }
 };
 

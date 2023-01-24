@@ -17,7 +17,6 @@ const searchByName = async (name) => {
 
 const searchNameDB = async (name) => {
     const findDB = await getAllGamesDb()
-    console.log("juegos encontrados en la base de datos",findDB)
     const gameFiltrado = findDB.filter(el =>  el.dataValues.name.toLowerCase().includes(name.toLowerCase()))
     return gameFiltrado; 
 }

@@ -34,7 +34,6 @@ const getSubscriptionLink = async (req, res) => {
 
         return res.json(subscription);
     } catch (error) {
-        console.log(error);
 
         return res
             .status(500)
@@ -48,7 +47,9 @@ const paymentSuccsess = async (req, res) => {
         const createPurchase = await addPurchaseUser(userId);
         res.status(200).json({ createPurchase });
     } catch (error) {
-        console.log(error);
+        return res.status(400).json({
+            error: error.message
+        })
     }
 };
 

@@ -18,11 +18,9 @@ const getAllGamesDb = async (search = "") => {
             },
             include: { model: Genre },
         });
-        console.log(response);
         return response;
     } catch (error) {
-        console.log(error.message);
-        return error;
+        return error.message;
     }
 };
 

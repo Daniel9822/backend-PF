@@ -10,7 +10,6 @@ const { URL, API_KEY } = process.env;
  * @returns {object}
  */
 const apiClient = async (path, page = "") => {
-    console.log(`${URL}${path}?key=${API_KEY}${page}`);
     try {
         const response = await axios.get(
             `${URL}${path}?key=${API_KEY}${page}`,

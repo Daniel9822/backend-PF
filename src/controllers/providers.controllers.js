@@ -21,7 +21,9 @@ const getGamesByProvider = async (req, res) => {
               })
             : res.status(200).json(searchUser.provider.videoGamesPropor);
     } catch (error) {
-        console.log(error);
+        return res.status(500).json({
+            error: error.message
+        })
     }
 };
 

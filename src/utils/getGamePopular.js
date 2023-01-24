@@ -5,7 +5,6 @@ const mapGames = require("./mapGames");
 const getGamePopularOrReleased = async (popularOrReleased) => {
     try {
         let getDate = formateDate(popularOrReleased)
-        console.log(getDate)
         let response = await apiClient(
             "games",
             `&dates=${getDate}&ordering=-added&page_size=20`

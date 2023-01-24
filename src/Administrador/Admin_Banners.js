@@ -12,7 +12,6 @@ const createBanner = async (req, res) => {
         let searchAdmin = await Admin.findByPk(adminId)
 
         if(searchAdmin){
-            console.log("ENTROOO")
             let banner = await Banner.create(bannerInfo)
             searchAdmin.addBanner(banner)
             return res.status(200).json('Banner created')

@@ -46,8 +46,6 @@ async function main() {
         await getGamesForExaminar() 
         let crearAdministrador = await createAdmin() 
         let createGenre = await createGenres()
-        console.log(createGenre);
-        console.log("console.log crearAdministrador",crearAdministrador)
         console.log("Conect to database"); 
         server.listen(port, () => {
             console.log(`server lisener in port ${port}`);

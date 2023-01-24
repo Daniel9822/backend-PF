@@ -54,7 +54,6 @@ const loginUser = async (req, res) => {
     });
 
     let adminUser = await adminLogin(email, password)
-    console.log(adminUser);
     if(adminUser?.isAdmin){
         return res.status(200).json(adminUser)
     }
@@ -76,7 +75,6 @@ const loginUser = async (req, res) => {
         try {
             let pass =
                 search === null ? user.passwordHash : search.passwordHash;
-            console.log(pass);
             const passworCorrect = await bcrypt.compare(password, pass);
 
             if (!passworCorrect) {
